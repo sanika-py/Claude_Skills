@@ -1,356 +1,462 @@
 # Claude Skills
 
-A curated collection of custom **Claude Skills** designed to improve Claude's performance for specific workflows, writing styles, research tasks, presentations, development, and professional use cases.
+A structured collection of reusable **Claude Skills** designed to provide specialized instructions, workflows, and guidelines for different types of tasks.
 
-These skills provide Claude with reusable instructions, behavioral guidelines, workflows, and domain-specific context so that it can produce more consistent and useful results.
-
----
-
-## ✨ What Are Claude Skills?
-
-Claude Skills are reusable instruction sets that teach Claude **how to approach a specific type of task**.
-
-Instead of repeatedly explaining:
-
-* how you want something written
-* what tone should be used
-* how research should be structured
-* how presentations should be created
-* what standards should be followed
-
-you can create a Skill once and reuse it whenever that workflow is needed.
-
-### Example
-
-Instead of prompting:
-
-> "Write this like a CEO, make it sound natural, use storytelling, don't make it robotic, and keep the audience engaged."
-
-A dedicated **Storytelling Skill** can automatically apply those principles whenever Claude is asked to create a story.
+Each skill is maintained as an independent module containing a `SKILL.md` file. The skills are designed to be modular, reusable, and easy to extend as new use cases are identified.
 
 ---
 
 ## 📁 Repository Structure
 
 ```text
-claude-skills/
+Skills/
 │
-├── README.md
+├── human-writing/
+│   └── SKILL.md
 │
-├── skills/
-│   │
-│   ├── storytelling/
-│   │   ├── SKILL.md
-│   │   └── README.md
-│   │
-│   ├── presentation/
-│   │   ├── SKILL.md
-│   │   └── README.md
-│   │
-│   ├── research/
-│   │   ├── SKILL.md
-│   │   └── README.md
-│   │
-│   └── ...
+├── presentation-skills/
+│   └── SKILL.md
 │
-├── examples/
-│   ├── storytelling/
-│   ├── presentation/
-│   └── research/
+├── storytelling-skill/
+│   └── SKILL.md
 │
-├── templates/
-│   └── SKILL_TEMPLATE.md
-│
-└── LICENSE
+└── README.md
 ```
 
 ---
 
-## 🧩 Available Skills
+## 🧩 What Are Claude Skills?
 
-| Skill                | Purpose                                                           |
-| -------------------- | ----------------------------------------------------------------- |
-| 🎭 Storytelling      | Creates natural, engaging stories with strong narrative structure |
-| 📊 Presentation      | Helps create structured and audience-focused presentations        |
-| 🔎 Research          | Produces organized, evidence-based research                       |
-| ✍️ Writing           | Improves clarity, tone, structure, and readability                |
-| 💼 CEO Communication | Helps create concise executive-level communication                |
-| 🎤 Speaker Content   | Structures content for speakers, panels, and events               |
+Claude Skills are reusable instruction sets that provide Claude with specialized knowledge and behavioral guidelines for a particular task or workflow.
 
-> More skills will be added over time.
+Instead of repeatedly providing detailed instructions in every conversation, those instructions can be packaged into a skill and reused whenever the corresponding task requires them.
+
+A skill can define:
+
+* Task-specific instructions
+* Workflows and processes
+* Rules and constraints
+* Writing guidelines
+* Quality standards
+* Examples
+* Expected output formats
+* Domain-specific behavior
+
+The goal is to make Claude's behavior more **consistent, reliable, and specialized** across different tasks.
 
 ---
 
-## 🚀 Getting Started
+## 🎯 Purpose
 
-### 1. Clone the repository
+This repository is intended to serve as a growing library of specialized Claude Skills.
 
-```bash
-git clone https://github.com/<your-username>/claude-skills.git
-```
+The current collection focuses on three areas:
 
-### 2. Open the repository
+1. **Human-like writing**
+2. **Presentation development**
+3. **Storytelling and narrative development**
 
-```bash
-cd claude-skills
-```
+Each skill is separated into its own directory so that it can be developed, maintained, and improved independently.
 
-### 3. Choose a Skill
+---
 
-Navigate to:
+# 🛠️ Available Skills
+
+## 1. Human Writing
+
+**Directory:** `human-writing/`
+
+**Instruction file:** `human-writing/SKILL.md`
+
+The **Human Writing** skill focuses on producing writing that feels natural, authentic, and context-aware.
+
+It is intended to help Claude avoid unnecessarily robotic, repetitive, or overly polished language while maintaining clarity and correctness.
+
+### Key areas
+
+* Natural language
+* Human-like tone
+* Voice preservation
+* Readability
+* Tone adaptation
+* Context-aware rewriting
+* Conversational writing
+* Avoiding repetitive AI-style phrasing
+
+### Example use cases
 
 ```text
-skills/<skill-name>/
+Rewrite this paragraph naturally.
+Make this email sound more human.
+Keep my writing style but improve the grammar.
+Make this explanation less robotic.
+Rewrite this without making it sound AI-generated.
 ```
-
-Each skill contains its own `SKILL.md` file with the instructions required by Claude.
-
-### 4. Use the Skill
-
-Copy the skill instructions into your Claude workflow or use them according to your Claude Skills setup.
 
 ---
 
-## 🛠️ Creating a New Skill
+# 2. Presentation Skills
 
-Use the provided template:
+**Directory:** `presentation-skills/`
+
+**Instruction file:** `presentation-skills/SKILL.md`
+
+The **Presentation Skills** module provides structured guidance for creating effective presentations.
+
+It focuses on turning information into a clear and logical presentation while maintaining appropriate information density and audience engagement.
+
+### Key areas
+
+* Presentation structure
+* Slide organization
+* Information hierarchy
+* Content prioritization
+* Visual storytelling
+* Audience engagement
+* Slide readability
+* Professional communication
+* Narrative flow
+
+### Example use cases
 
 ```text
-templates/SKILL_TEMPLATE.md
+Create a presentation structure for this topic.
+Turn this research into presentation slides.
+Improve the flow of these slides.
+Reduce the text on this slide.
+Create a professional presentation outline.
 ```
-
-A good skill should clearly define:
-
-### 1. Purpose
-
-Explain what the skill is designed to accomplish.
-
-### 2. Role
-
-Define how Claude should behave when using the skill.
-
-### 3. Instructions
-
-Provide clear rules Claude should follow.
-
-### 4. Workflow
-
-Describe how Claude should approach the task step-by-step.
-
-### 5. Tone & Style
-
-Specify the desired communication style.
-
-### 6. Constraints
-
-Define what Claude should avoid.
-
-### 7. Output Format
-
-Describe the expected structure of the final response.
 
 ---
 
-## 📄 Skill Structure
+# 3. Storytelling Skill
 
-A typical `SKILL.md` follows this structure:
+**Directory:** `storytelling-skill/`
 
-```markdown
+**Instruction file:** `storytelling-skill/SKILL.md`
+
+The **Storytelling Skill** is designed for creative-writing and narrative-development workflows.
+
+It provides guidance for building compelling stories while maintaining consistency in characters, plot, pacing, tone, and emotional progression.
+
+### Key areas
+
+* Story structure
+* Plot development
+* Character development
+* Character arcs
+* Scene construction
+* Dialogue
+* Conflict
+* Suspense
+* Pacing
+* Emotional progression
+* Narrative consistency
+* World-building
+
+### Example use cases
+
+```text
+Develop this story idea further.
+Improve the pacing of this chapter.
+Create a stronger character arc.
+Rewrite this scene while preserving the plot.
+Build suspense before the reveal.
+Improve the dialogue between these characters.
+```
+
+---
+
+# 📂 Skill Architecture
+
+Each skill follows a simple directory structure:
+
+```text
+skill-name/
+└── SKILL.md
+```
+
+The `SKILL.md` file acts as the central instruction file for that skill.
+
+A typical skill can contain sections such as:
+
+```text
 # Skill Name
-
-## Description
-
-A short explanation of what this skill does.
 
 ## Purpose
 
-What problem does this skill solve?
+## Scope
 
-## Role
+## Core Principles
 
-Define Claude's role when using this skill.
-
-## Core Instructions
-
-- Instruction 1
-- Instruction 2
-- Instruction 3
+## Instructions
 
 ## Workflow
 
-1. Understand the request.
-2. Identify the objective.
-3. Apply the relevant framework.
-4. Produce the final output.
+## Guidelines
 
-## Tone
+## Examples
 
-- Natural
-- Clear
-- Human
-- Context-aware
+## Constraints
 
-## Avoid
-
-- Generic responses
-- Repetitive language
-- Unnecessary filler
-
-## Output
-
-Define the expected response format.
+## Output Requirements
 ```
 
----
-
-## 🎯 Design Principles
-
-These skills are built around a few principles:
-
-### Context over Templates
-
-Skills should help Claude understand **why** something should be written or created instead of simply forcing a fixed template.
-
-### Natural Output
-
-The goal is to produce content that feels:
-
-* human
-* contextual
-* intentional
-* audience-aware
-
-rather than obviously AI-generated.
-
-### Reusable Workflows
-
-A skill should solve a recurring problem and be reusable across multiple projects.
-
-### Clear Instructions
-
-Skills should use precise instructions instead of vague requests such as:
-
-> "Make it better."
-
-Instead:
-
-> "Prioritize clarity, remove unnecessary filler, preserve the original meaning, and adapt the tone to the intended audience."
+The exact structure can vary depending on the requirements of the individual skill.
 
 ---
 
-## 🧪 Examples
+# 🔄 How Skills Work
 
-Example skills can be found inside:
+The general workflow can be represented as:
 
 ```text
-examples/
+User Task
+    │
+    ▼
+Relevant Skill
+    │
+    ▼
+SKILL.md
+    │
+    ▼
+Specialized Instructions
+    │
+    ▼
+Claude
+    │
+    ▼
+Task-specific Response
 ```
 
-These demonstrate how each skill changes Claude's approach to a task.
+Instead of treating every task the same way, skills provide Claude with additional context and instructions relevant to the task being performed.
 
 ---
 
-## 🤝 Contributing
+# 🧱 Design Principles
 
-Contributions are welcome.
+The repository follows several principles when creating and maintaining skills.
 
-To contribute:
+## Modularity
 
-1. Fork the repository.
-2. Create a new branch.
+Each skill should focus on a specific category of tasks.
+
+A skill should avoid unnecessary dependencies on unrelated skills.
+
+---
+
+## Reusability
+
+Instructions should be written so that they can be applied across multiple conversations and different examples within the same task category.
+
+---
+
+## Clarity
+
+Instructions should be explicit and structured.
+
+Avoid ambiguous instructions when a more precise rule can be provided.
+
+---
+
+## Consistency
+
+A skill should encourage predictable behavior across similar tasks while still allowing appropriate adaptation to context.
+
+---
+
+## Maintainability
+
+Skills should remain easy to read, update, test, and extend.
+
+Large collections of unrelated instructions should be separated into appropriate skills rather than placed into a single file.
+
+---
+
+## Context Awareness
+
+Skills should guide Claude to consider the user's objective, context, audience, and constraints instead of applying instructions mechanically.
+
+---
+
+# ➕ Adding a New Skill
+
+To add a new skill, create a new directory inside the repository.
+
+For example:
+
+```text
+Skills/
+├── human-writing/
+├── presentation-skills/
+├── storytelling-skill/
+└── research-skill/
+    └── SKILL.md
+```
+
+### Recommended process
+
+### 1. Create the skill directory
 
 ```bash
-git checkout -b feature/new-skill
+mkdir research-skill
 ```
 
-3. Add or improve a skill.
-4. Test the skill with multiple prompts.
-5. Update the relevant documentation.
-6. Commit your changes.
+### 2. Create the instruction file
 
-```bash
-git commit -m "Add <skill-name> skill"
+```text
+research-skill/
+└── SKILL.md
 ```
 
-7. Push your branch.
+### 3. Define the purpose
 
-```bash
-git push origin feature/new-skill
+Clearly explain what the skill is designed to accomplish.
+
+### 4. Define the instructions
+
+Document the behavior Claude should follow when applying the skill.
+
+### 5. Add examples
+
+Include examples when they make the intended behavior clearer.
+
+### 6. Define constraints
+
+Document important limitations, rules, or situations where the skill should or should not be applied.
+
+### 7. Test the skill
+
+Use representative prompts to verify that the skill behaves as intended.
+
+### 8. Update the README
+
+Add the new skill to the repository structure and skills catalog.
+
+---
+
+# 🧪 Testing Skills
+
+Skills should be tested against realistic tasks rather than only simple examples.
+
+A basic testing process can include:
+
+```text
+Input
+  ↓
+Apply Skill
+  ↓
+Review Output
+  ↓
+Check Against Requirements
+  ↓
+Identify Problems
+  ↓
+Update SKILL.md
+  ↓
+Retest
 ```
 
-8. Open a Pull Request.
+When evaluating a skill, consider:
 
-### Contribution Guidelines
-
-A new skill should:
-
-* solve a clear problem
-* have a specific purpose
-* contain reusable instructions
-* avoid unnecessary complexity
-* include examples where useful
-* follow the repository's structure
+* Does Claude follow the intended instructions?
+* Is the output consistent?
+* Does it preserve relevant user context?
+* Does it avoid unnecessary behavior?
+* Does it handle edge cases?
+* Does the output meet the expected format?
+* Does the skill improve the task compared with a general response?
 
 ---
 
-## 📌 Skill Quality Checklist
+# 🗃️ Current Skill Catalog
 
-Before submitting a Skill, verify:
-
-* [ ] The purpose is clearly defined
-* [ ] Instructions are unambiguous
-* [ ] The intended behavior is explained
-* [ ] Tone and style are specified
-* [ ] Unwanted behavior is documented
-* [ ] Expected output is defined
-* [ ] The skill works across multiple prompts
-* [ ] Examples are provided where appropriate
-* [ ] Documentation is included
+| Skill                   | Directory              | Primary Focus                              |
+| ----------------------- | ---------------------- | ------------------------------------------ |
+| **Human Writing**       | `human-writing/`       | Natural, authentic, context-aware writing  |
+| **Presentation Skills** | `presentation-skills/` | Presentation structure and communication   |
+| **Storytelling Skill**  | `storytelling-skill/`  | Narrative development and creative writing |
 
 ---
 
-## 🗺️ Roadmap
+# 🛣️ Future Skills
 
-Planned improvements include:
+The repository can be expanded with additional specialized skills as new workflows are identified.
 
-* [ ] More writing skills
-* [ ] Research and analysis skills
-* [ ] Developer-focused skills
-* [ ] Presentation and pitch skills
-* [ ] Business communication skills
-* [ ] Industry-specific skills
-* [ ] Skill testing framework
-* [ ] Skill quality benchmarks
-* [ ] Community-contributed skills
+Potential additions include:
 
----
+```text
+research-skill/
+coding-skill/
+data-analysis/
+technical-writing/
+documentation/
+content-strategy/
+creative-writing/
+marketing-writing/
+resume-writing/
+```
 
-## 📜 License
-
-This repository is licensed under the **MIT License** unless otherwise specified.
-
-See [`LICENSE`](LICENSE) for details.
+Future skills should follow the same modular approach and include their own `SKILL.md`.
 
 ---
 
-## ⭐ Support
+# 🤝 Contributing
 
-If you find these skills useful:
+When adding or modifying a skill:
 
-* ⭐ Star the repository
-* 🐛 Report issues
-* 💡 Suggest new skills
-* 🤝 Contribute improvements
+1. Keep the skill focused on a clearly defined purpose.
+2. Use clear and actionable instructions.
+3. Avoid duplicating instructions unnecessarily.
+4. Include examples where useful.
+5. Test changes against representative tasks.
+6. Keep the repository structure organized.
+7. Update the root `README.md` when adding a new skill.
 
 ---
 
-## 👤 Author
+# 📌 Repository Guidelines
+
+When creating new skills, prefer:
+
+* Clear directory names
+* One primary `SKILL.md` per skill
+* Structured Markdown
+* Explicit instructions
+* Practical examples
+* Minimal redundancy
+* Clear scope and constraints
+
+Avoid:
+
+* Unrelated instructions inside a skill
+* Contradictory rules
+* Excessive repetition
+* Unclear behavioral requirements
+* Instructions that depend on undocumented context
+
+---
+
+# 📄 License
+
+This project does not currently specify a license.
+
+If this repository is intended for public distribution, add an appropriate license file and update this section accordingly.
+
+---
+
+# 👤 Maintainer
 
 **Sanika Chougule**
 
-AI & Data Science Student
-Interested in AI, developer tools, automation, and practical applications of generative AI.
+This repository is maintained as a collection of reusable Claude Skills for specialized AI-assisted workflows.
 
 ---
 
-> **Build once. Instruct clearly. Reuse everywhere.**
+## 📚 Skill Documentation
+
+For detailed instructions and implementation guidance, refer to the individual skill files:
+
+* [`human-writing/SKILL.md`](human-writing/SKILL.md)
+* [`presentation-skills/SKILL.md`](presentation-skills/SKILL.md)
+* [`storytelling-skill/SKILL.md`](storytelling-skill/SKILL.md)
